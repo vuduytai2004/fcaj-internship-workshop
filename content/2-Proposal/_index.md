@@ -5,111 +5,95 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
 In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+# DocuFlow AI Project Proposal & Data Analytics Module
 
-### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+## 1. Executive Summary
 
-### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+DocuFlow AI is an intelligent invoice and receipt processing platform on AWS based on a serverless architecture. The system is designed to automatically ingest files, extract data using AI/OCR technology, standardize results into JSON format, and manage processing statuses. The project serves the purpose of demonstrating a complete end-to-end workflow within an AWS workshop environment.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+## 2. Problem Statement
 
-### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+**Current Problems**
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+* Manual invoice data entry is time-consuming and prone to errors in crucial information such as vendors, dates, or amounts.
+* Documents are often scattered in emails or folders, making it difficult to search, audit, and track statuses.
+* Lack of overall visibility makes it hard for the finance team to know exactly which documents have errors and require manual intervention.
+* The process is prone to bottlenecks during peak periods at the end of the month or quarter when invoice volumes spike.
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+**Proposed Solution**
 
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+* Build a direct and secure document upload portal via presigned URLs.
+* Operate a fully automated serverless workflow, integrating retry mechanisms, status tracking, and Dead Letter Queues (DLQ).
+* Automatically extract key data fields using Textract and Bedrock, then store metadata in DynamoDB and JSON results in S3.
 
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+**Benefits & Return on Investment (ROI)**
 
-### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
+* Minimize manual data entry, enhance status visibility, and provide structured data outputs.
+* The system automatically sends alerts when errors are detected or extraction confidence is low, optimizing review time.
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+## 3. Solution Architecture
 
-### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+The overall architecture of DocuFlow AI is structured into 5 specialized layers: frontend/auth, ingestion/API, workflow processing, data storage/analytics, and observability/security.
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+**Core System Workflow & AI Extraction**
 
-Total: $0.7/month, $8.40/12 months
+* **Event Ingestion:** When a user uploads a file to the S3 Raw Bucket, an event is sent via EventBridge to an SQS queue.
+* **Workflow Orchestration:** Lambda triggers a Step Functions Standard Workflow to orchestrate the entire document lifecycle.
+* **Raw Extraction (OCR):** Amazon Textract (AnalyzeExpense) reads and extracts raw information fields from invoices/receipts.
+* **Intelligent Standardization (GenAI):** Amazon Bedrock receives raw data, classifies, and standardizes the format into a single JSON schema.
+* **Result Validation:** Lambda performs JSON format checks, calculates the confidence score, and updates the status accordingly.
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
 
-### 7. Risk Assessment
-#### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
+## 4. Technical Implementation (Focus on AI Extraction & Classification)
 
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
+The AI Extraction & Classification Module is handled by Member 3, primarily working with Textract, Bedrock, and Lambda.
 
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+**AI Component Design**
 
-### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+* **Raw Data Storage:** Must retain all raw results from Textract in the `processed` folder on S3 for debugging purposes when data discrepancies occur.
+* **Prompt Design for Bedrock:** Bedrock only accepts reduced raw fields as input for optimization. The prompt must strictly request a valid JSON format according to the schema, absolutely avoiding markdown or explanatory text.
+* **Confidence Policy:** Document status is granted as `EXTRACTED` only when `confidenceScore >= 0.80` and the system recognizes all mandatory data fields.
+* **Manual Review Redirection:** The system will flag as `REVIEW_REQUIRED` if the confidence score is `< 0.80` or when extraction is missing the vendor name (`vendorName`) and total amount (`totalAmount`).
+* **Error Handling:** If Bedrock or Textract encounters a temporary error, Step Functions will initiate retries using a backoff mechanism; if the maximum number of attempts is exceeded, the status will change to `FAILED`.
+
+
+## 5. Timeline & Milestones
+
+The plan is distributed over 12 weeks with focus objectives:
+
+* **Week 1:** Agree on scope, data contract, overall architecture, and module assignments for each member.
+* **Week 4:** Complete the skeleton framework for EventBridge, SQS, Job Starter services, and the Step Functions workflow.
+* **Week 5:** Successfully integrate the Textract flow, ensuring raw data extraction capabilities from sample sets.
+* **Week 6:** Apply Bedrock to standardize data, validate JSON formats, and store in the S3 `processed` bucket.
+* **Week 8:** Finalize error handling mechanisms, DLQs, retry features, and set up SNS alerts for `FAILED` or `REVIEW_REQUIRED` cases.
+* **Week 11-12:** Complete E2E testing, prepare demo scripts, finalize runbook documentation, and verify resource clean-up scripts.
+
+
+## 6. Cost Control & Budgeting
+
+* **Resource Limits:** Constrain file sizes, number of processed pages, and only use about 5-10 sample invoices/receipts during the demo.
+* **Model Optimization:** Prioritize low-cost Bedrock models and verify model availability in the account/region before deployment.
+* **Budget Alerts:** Set up AWS Budgets alerts at $5 and $10 cost thresholds.
+* **Resource Lifecycle:** Require configuring S3 lifecycles or using cleanup scripts to clear stored files after the workshop ends, avoiding ongoing maintenance fees.
+
+
+## 7. Risk Assessment (AI & Extraction Module)
+
+| Risk | Impact | Mitigation Strategy |
+| --- | --- | --- |
+| Textract misreads due to blurry images or weird formats | System outputs incorrect or missing data fields | Use sharp sample documents, apply confidence thresholds and `REVIEW_REQUIRED` status. |
+| Bedrock outputs malformed JSON data | Causes data parsing errors at the Lambda layer | Write strict prompts, enforce JSON schema validation, and handle retries/fallbacks. |
+| Region does not support Bedrock model | The entire AI standardization flow is interrupted | Verify region early on, prepare backup models or cross-region deployment plans. |
+
+
+## 8. Expected Outcomes (Definition of Done)
+
+* Users can successfully log in and upload sample invoice/receipt files to the system.
+* The uploaded files trigger the Step Functions chain to run smoothly through: Textract, Bedrock, JSON validation, and storage.
+* The `result.json` data is correctly formatted and stored in the S3 processed bucket according to the data contract.
+* The DynamoDB table accurately records the metadata and current status of the document.
+* Test cases prove the system works correctly for at least one `EXTRACTED` scenario and one exception scenario (`REVIEW_REQUIRED` or `FAILED`).

@@ -5,27 +5,41 @@ weight: 1
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+# Blog 3 - How ALS GeoAnalytics LITHOLENS™ Revolutionizes Drill Core Logging Using Machine Learning on Amazon EKS
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+**Author:** Phạm Tùng Dương
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+In the mining industry, accurate geological analysis is a crucial factor for improving mine design and development. Traditionally, this process required experts to manually inspect drill core samples on-site—often in remote and harsh areas—which was very time-consuming and labor-intensive.
+To address this issue, ALS GeoAnalytics developed the LITHOLENS™ platform. This is a system applying Machine Learning (ML) and computer vision to automate the core logging process, helping to enhance data consistency, improve operational efficiency, and reduce costs as well as greenhouse gas emissions.
 
-Key points to know:
+### Challenges in the Traditional Method
+Building a 3D resource model for a new mine requires drilling thousands of holes to inspect the structure and composition of samples. This process faces multiple barriers such as:
+* Difficult site access: Geologists must travel long distances to inspect physical sample boxes.
+* Subjective assessments: Different experts often provide inconsistent geological logs.
+* Forgotten historical data: Images from previous campaigns often lack standardization tools for meaningful analysis.
+* Sample degradation: Physical samples can be lost or degraded over time, making it difficult to validate old data.
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+### Machine Learning at Geological Scale
+LITHOLENS™ utilizes a comprehensive suite of ML and Deep Learning (DL) models to turn raw images into actionable insights:
+* Color Extraction and Clustering: Uses algorithms like K-Means or GMM to identify mineralogical variations through color pixels.
+* Percentage Reporting: Segments images into sections (e.g., 20cm intervals) to analyze the spatial distribution of lithological patterns.
+* Specialized Deep Learning Models:
+  * RoQE Net: An advanced neural network helping extract geotechnical parameters like Rock Quality Designation (RQD).
+  * VeinNet and CobbleNet: Designed to identify complex geological features like mineral veins and lithological structures with high accuracy.
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+### Solution Architecture on AWS
+ALS GeoAnalytics built a hybrid architecture combining containerized workloads and serverless components:
 
-...Image...
+![Architecture Diagram](/images/3-BlogsPosted/3.3-Blog3/architecture_blog3.png)
 
-...Link...
+* Amazon EKS (Elastic Kubernetes Service): Handles heavy ML/DL tasks requiring GPU compute power (G6 instance types).
+* AWS Lambda: Handles API operations and workload orchestration, helping reduce operational costs compared to maintaining always-on API servers.
+* Amazon S3 and Amazon RDS: Used to store input data, intermediate results, and manage structured data.
 
-...Guide...
+Performance Highlights: By using pre-configured machine images (AMIs), container startup time has been reduced from several minutes to under 30 seconds. Additionally, EKS clusters can automatically scale down to zero when there are no jobs in the queue, maximizing cost optimization.
+
+### Business Impact and Future Vision
+To date, LITHOLENS™ has been successfully deployed across 10 mining companies with over 40 active projects. The system not only helps standardize the analysis process but also enables real-time monitoring and reporting, helping managers make faster and more accurate decisions.
+The success of LITHOLENS™ on Amazon EKS doesn't stop at the mining industry. ALS GeoAnalytics is looking to expand this platform to sectors such as oil and gas, civil engineering, and even space exploration.
+
+Original article link: [https://aws.amazon.com/vi/blogs/architecture/how-als-geoanalytics-litholens-revolutionizes-core-logging-through-machine-learning-with-amazon-eks/](https://aws.amazon.com/vi/blogs/architecture/how-als-geoanalytics-litholens-revolutionizes-core-logging-through-machine-learning-with-amazon-eks/)

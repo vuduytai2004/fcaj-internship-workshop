@@ -5,55 +5,39 @@ weight: 1
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 7:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Ôn tập các khái niệm cơ sở dữ liệu (RDBMS, NoSQL) và ứng dụng trên AWS.
+* Tìm hiểu chi tiết các dịch vụ cơ sở dữ liệu của AWS như Amazon RDS, Aurora, Redshift và ElastiCache.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2 | Module 06-01 - Database Concepts review <br> - RDBMS / NoSQL <br> - SQL (Structured Query Language) <br> - Scalability | 01/06/2026 | 01/06/2026 | <https://www.youtube.com/watch?v=OOD2RwWuLRw&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=217> |
+| 3 | Module 06-02 - Amazon RDS & Amazon Aurora <br> - RDS & Aurora <br> - Database Engine <br> - Multi-AZ Deployment <br> - Read Replicas | 02/06/2026 | 02/06/2026 | <https://www.youtube.com/watch?v=qbrobQZrokY&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=218> |
+| 4 | Module 06-03 - Redshift - Elasticache <br> - Redshift <br> - ElastiCache <br> - OLAP (Online Analytical Processing) | 03/06/2026 | 03/06/2026 | <https://www.youtube.com/watch?v=UvdiRW34aNI&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=219> |
+| 5 | Thực hành một số bài lab ở module 6 | 04/06/2026 | 06/06/2026 | <https://000005.awsstudygroup.com/> <br><br> <https://000043.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 7:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* **Nắm vững các khái niệm cơ sở dữ liệu (Database Concepts):**
+  * Ôn tập và phân biệt rõ ràng giữa hai mô hình cơ sở dữ liệu chính là **RDBMS** (Relational Database Management System) và **NoSQL**. Hiểu được các trường hợp sử dụng tối ưu cho từng loại hình cơ sở dữ liệu dựa trên cấu trúc dữ liệu và yêu cầu truy xuất.
+  * Nắm vững các khái niệm cốt lõi của ngôn ngữ truy vấn cấu trúc **SQL (Structured Query Language)**, cách thực hiện các câu lệnh thao tác với dữ liệu.
+  * Hiểu sâu về khái niệm **Khả năng mở rộng (Scalability)** trong cơ sở dữ liệu: Phân biệt giữa mở rộng theo chiều dọc (Vertical Scaling - Scale up) và chiều ngang (Horizontal Scaling - Scale out), đồng thời biết áp dụng phương pháp mở rộng nào cho phù hợp với loại hình Database đang sử dụng.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* **Hiểu và ứng dụng các dịch vụ Amazon RDS & Amazon Aurora:**
+  * Hiểu rõ khái niệm và cấu trúc của dịch vụ quản lý cơ sở dữ liệu quan hệ **Amazon RDS**, làm quen với các loại Database Engine được hỗ trợ như MySQL, PostgreSQL, MariaDB, Oracle, và SQL Server.
+  * Khám phá **Amazon Aurora**, giải pháp cơ sở dữ liệu quan hệ tương thích với MySQL và PostgreSQL do AWS thiết kế tối ưu, cung cấp hiệu suất và khả năng mở rộng vượt trội.
+  * Tìm hiểu cách cấu hình kiến trúc có tính sẵn sàng cao thông qua **Multi-AZ Deployment**, đảm bảo cơ sở dữ liệu có khả năng tự động chuyển đổi dự phòng (failover) trong trường hợp xảy ra sự cố.
+  * Cấu hình và sử dụng **Read Replicas** để giảm tải áp lực đọc dữ liệu lên cơ sở dữ liệu chính (Primary DB), giúp nâng cao hiệu suất cho các ứng dụng có lượng truy vấn đọc cao.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* **Hiểu và vận dụng kiến thức về Amazon Redshift & Amazon ElastiCache:**
+  * Khám phá **Amazon Redshift**, dịch vụ kho dữ liệu (Data Warehouse) mạnh mẽ dành cho các tác vụ phân tích trực tuyến **OLAP (Online Analytical Processing)**. Hiểu cách sử dụng dịch vụ này để xử lý và truy vấn khối lượng dữ liệu khổng lồ phục vụ cho việc lập báo cáo phân tích.
+  * Nắm bắt cơ chế lưu trữ đệm trong bộ nhớ (In-memory caching) thông qua dịch vụ **Amazon ElastiCache** (với Memcached và Redis). Hiểu cách dịch vụ này hỗ trợ tối ưu hóa thời gian phản hồi của ứng dụng bằng cách lưu trữ tạm thời các dữ liệu thường xuyên được truy xuất.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* **Hoàn thành các bài Lab thực hành (Module 6 Labs):**
+  * Đã áp dụng toàn bộ những kiến thức lý thuyết về các hệ quản trị cơ sở dữ liệu vào môi trường thực tế trên AWS thông qua các bài thực hành chuyên sâu.
+  * Trực tiếp triển khai, cấu hình và vận hành các hệ thống Amazon RDS, ElastiCache, và trải nghiệm quá trình tương tác trực tiếp bằng các công cụ Database Clients.
 
 

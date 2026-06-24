@@ -5,55 +5,44 @@ weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững các khái niệm và thành phần trong mạng AWS (VPC, Subnet, Route Table, IGW, NAT Gateway).
+* Hiểu và cấu hình bảo mật mạng (Security Group, NACL) cũng như các giải pháp kết nối mạng nâng cao (VPC Peering, Transit Gateway).
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2 | Module 02-01 - AWS Virtual Private Cloud <br> - VPC (Virtual Private Cloud) <br> - Isolation <br> - CIDR Block <br> - Networking | 04/05/2026 | 04/05/2026 | <https://www.youtube.com/watch?v=O9Ac_vGHquM&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=26> |
+| 3 | Module 02-02 - VPC Security and Multi-VPC features <br> - Security Group <br> - NACL <br> - VPC Peering <br> - Transit Gateway | 05/05/2026 | 05/05/2026 | <https://www.youtube.com/watch?v=BPuD1l2hEQ4&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=27> |
+| 4 | Module 02-03 - VPN - DirectConnect - LoadBalancer - ExtraResources <br> - Site-to-Site VPN <br> - Direct Connect (DX) <br> - Elastic Load Balancer (ELB) <br> - High Availability <br> - Hybrid Connectivity | 06/05/2026 | 06/05/2026 | <https://www.youtube.com/watch?v=CXU8D3kyxIc&list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i&index=28> |
+| 5 | Thực hành một số bài lab module 2 | 07/05/2026 | 08/05/2026 | <https://000003.awsstudygroup.com/> <br><br> <https://000010.awsstudygroup.com/> <br><br> <https://000019.awsstudygroup.com/> <br><br> <https://000020.awsstudygroup.com/> |
+| 7 | Tham gia sự kiện FCAJ Community Day | 09/05/2026 | 09/05/2026 | |
 
 
 ### Kết quả đạt được tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* **Xây dựng kiến trúc mạng nền tảng với AWS VPC (Virtual Private Cloud):** 
+  * Hiểu rõ khái niệm Isolation (cách ly mạng) để đảm bảo an toàn cho các tài nguyên trên Cloud.
+  * Phân chia và quản lý dải IP hiệu quả thông qua việc thiết lập và tính toán **CIDR Block**.
+  * Cấu trúc và định tuyến (Routing) dòng lưu lượng qua các subnets (Public/Private) để hình thành một hệ thống mạng hoàn chỉnh.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* **Triển khai bảo mật và mở rộng hạ tầng mạng nội bộ:**
+  * Áp dụng bảo mật mạng đa lớp (Multi-layer Security) với **Security Group** (mức độ Instance) và **NACL** (mức độ Subnet).
+  * Giải quyết bài toán kết nối liên mạng và giao tiếp giữa các VPC khác nhau thông qua **VPC Peering**.
+  * Quản lý kết nối mạng tập trung, đơn giản hóa các kiến trúc mạng phức tạp quy mô lớn với **Transit Gateway**.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* **Thiết lập kết nối lai (Hybrid Connectivity) và Đảm bảo tính sẵn sàng cao (High Availability):**
+  * Nắm vững phương pháp thiết lập đường hầm bảo mật giữa mạng On-premises và AWS qua Internet bằng **Site-to-Site VPN**.
+  * Tìm hiểu giải pháp kết nối mạng chuyên biệt, ổn định và tốc độ cao bằng **Direct Connect (DX)**.
+  * Phân phối lưu lượng truy cập, cân bằng tải hệ thống và đảm bảo tính liên tục của dịch vụ với **Elastic Load Balancer (ELB)**.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* **Thực hành và vận dụng lý thuyết (Hands-on Labs Module 2):**
+  * Triển khai thành công các bài Lab thực hành thực tế liên quan đến mạng ảo, bảo mật mạng và cân bằng tải dựa trên nền tảng của awsstudygroup.
+  * Có khả năng kiểm tra lỗi (troubleshoot) các vấn đề cơ bản liên quan đến định tuyến và cấp phát IP trên AWS.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* **Phát triển kỹ năng mềm và mở rộng mạng lưới quan hệ (Community):**
+  * Tích cực tham gia sự kiện **FCAJ Community Day** để cập nhật các xu hướng công nghệ mới.
+  * Trao đổi, học hỏi kinh nghiệm thực chiến từ các chuyên gia (Mentors) và các thành viên khác trong chương trình.
 
 
