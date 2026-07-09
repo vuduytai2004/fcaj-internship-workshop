@@ -42,8 +42,3 @@ The event revolved around 4 main topics:
 ![Event image 3](/images/4-EventParticipated/4.1-Event1/media__1782215537145.png)
 ![Event image 4](/images/4-EventParticipated/4.1-Event1/media__1782215551031.png)
 
-### Step 3: Delete Backend Lambda Functions
-
-1. Go to **Lambda** -> In the **Functions** tab, search for `docuflow-dev-` to list all project functions.
-2. Select all of these functions at once (includes API Data, AI Lambdas, Job Starter, and Validate).
-3. Click **Actions** -> Select **Delete** -> Type `confirm` and click **Delete**.

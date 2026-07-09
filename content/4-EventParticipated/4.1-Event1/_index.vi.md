@@ -42,8 +42,3 @@ Sự kiện xoay quanh 4 chủ đề chính:
 ![Hình ảnh 3](/images/4-EventParticipated/4.1-Event1/media__1782215537145.png)
 ![Hình ảnh 4](/images/4-EventParticipated/4.1-Event1/media__1782215551031.png)
 
-### Bước 3: Xóa các hàm xử lý Backend Lambda
-
-1. Truy cập **Lambda** -> Tại danh sách **Functions**, gõ cụm từ `docuflow-dev-` vào ô tìm kiếm để lọc ra tất cả các hàm của dự án.
-2. Tích chọn tất cả các hàm này cùng một lúc (bao gồm cụm API Data, AI Lambdas, Job Starter, Validate).
-3. Nhấn nút **Actions** -> Chọn **Delete** -> Gõ `confirm` và nhấn **Delete**.
