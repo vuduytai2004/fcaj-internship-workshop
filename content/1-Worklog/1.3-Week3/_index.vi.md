@@ -22,27 +22,27 @@ pre: " <b> 1.3. </b> "
 
 ### Kết quả đạt được tuần 3:
 
-* **Xây dựng kiến trúc mạng nền tảng với AWS VPC (Virtual Private Cloud):** 
+* Xây dựng kiến trúc mạng nền tảng với AWS VPC (Virtual Private Cloud): 
   * Hiểu rõ khái niệm Isolation (cách ly mạng) để đảm bảo an toàn cho các tài nguyên trên Cloud.
-  * Phân chia và quản lý dải IP hiệu quả thông qua việc thiết lập và tính toán **CIDR Block**.
+  * Phân chia và quản lý dải IP hiệu quả thông qua việc thiết lập và tính toán CIDR Block.
   * Cấu trúc và định tuyến (Routing) dòng lưu lượng qua các subnets (Public/Private) để hình thành một hệ thống mạng hoàn chỉnh.
 
-* **Triển khai bảo mật và mở rộng hạ tầng mạng nội bộ:**
-  * Áp dụng bảo mật mạng đa lớp (Multi-layer Security) với **Security Group** (mức độ Instance) và **NACL** (mức độ Subnet).
-  * Giải quyết bài toán kết nối liên mạng và giao tiếp giữa các VPC khác nhau thông qua **VPC Peering**.
-  * Quản lý kết nối mạng tập trung, đơn giản hóa các kiến trúc mạng phức tạp quy mô lớn với **Transit Gateway**.
+* Triển khai bảo mật và mở rộng hạ tầng mạng nội bộ:
+  * Áp dụng bảo mật mạng đa lớp (Multi-layer Security) với Security Group (mức độ Instance) và NACL (mức độ Subnet).
+  * Giải quyết bài toán kết nối liên mạng và giao tiếp giữa các VPC khác nhau thông qua VPC Peering.
+  * Quản lý kết nối mạng tập trung, đơn giản hóa các kiến trúc mạng phức tạp quy mô lớn với Transit Gateway.
 
-* **Thiết lập kết nối lai (Hybrid Connectivity) và Đảm bảo tính sẵn sàng cao (High Availability):**
-  * Nắm vững phương pháp thiết lập đường hầm bảo mật giữa mạng On-premises và AWS qua Internet bằng **Site-to-Site VPN**.
-  * Tìm hiểu giải pháp kết nối mạng chuyên biệt, ổn định và tốc độ cao bằng **Direct Connect (DX)**.
-  * Phân phối lưu lượng truy cập, cân bằng tải hệ thống và đảm bảo tính liên tục của dịch vụ với **Elastic Load Balancer (ELB)**.
+* Thiết lập kết nối lai (Hybrid Connectivity) và Đảm bảo tính sẵn sàng cao (High Availability):
+  * Nắm vững phương pháp thiết lập đường hầm bảo mật giữa mạng On-premises và AWS qua Internet bằng Site-to-Site VPN.
+  * Tìm hiểu giải pháp kết nối mạng chuyên biệt, ổn định và tốc độ cao bằng Direct Connect (DX).
+  * Phân phối lưu lượng truy cập, cân bằng tải hệ thống và đảm bảo tính liên tục của dịch vụ với Elastic Load Balancer (ELB).
 
-* **Thực hành và vận dụng lý thuyết (Hands-on Labs Module 2):**
+* Thực hành và vận dụng lý thuyết (Hands-on Labs Module 2):
   * Triển khai thành công các bài Lab thực hành thực tế liên quan đến mạng ảo, bảo mật mạng và cân bằng tải dựa trên nền tảng của awsstudygroup.
   * Có khả năng kiểm tra lỗi (troubleshoot) các vấn đề cơ bản liên quan đến định tuyến và cấp phát IP trên AWS.
 
-* **Phát triển kỹ năng mềm và mở rộng mạng lưới quan hệ (Community):**
-  * Tích cực tham gia sự kiện **FCAJ Community Day** để cập nhật các xu hướng công nghệ mới.
+* Phát triển kỹ năng mềm và mở rộng mạng lưới quan hệ (Community):
+  * Tích cực tham gia sự kiện FCAJ Community Day để cập nhật các xu hướng công nghệ mới.
   * Trao đổi, học hỏi kinh nghiệm thực chiến từ các chuyên gia (Mentors) và các thành viên khác trong chương trình.
 
 

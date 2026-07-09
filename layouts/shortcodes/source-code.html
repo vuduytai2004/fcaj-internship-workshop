@@ -1,0 +1,13 @@
+{{ $file := .Get "file" }}
+{{ $language := .Get "language" | default "text" }}
+<div class="source-code-block">
+  <p><strong>File:</strong> <code>{{ $file }}</code></p>
+  {{ if fileExists $file }}
+    {{ $content := readFile $file }}
+    {{ printf "```%s\n%s\n```" $language $content | markdownify }}
+  {{ else }}
+    <div class="notices warning">
+      <p>Source code file not found: <code>{{ $file }}</code>. Please make sure the file exists in your project directory.</p>
+    </div>
+  {{ end }}
+</div>

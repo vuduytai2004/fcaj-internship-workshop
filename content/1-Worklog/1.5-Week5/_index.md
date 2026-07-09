@@ -21,30 +21,30 @@ pre: " <b> 1.5. </b> "
 
 ### Week 5 Achievements:
 
-* **Mastered knowledge of Storage Services on AWS:**
+* Mastered knowledge of Storage Services on AWS:
   * Clearly distinguished between different storage types: Object Storage, Block Storage, and File Storage.
   * Understood the purpose and use cases of popular storage services such as Amazon S3, Amazon EBS, and Amazon EFS.
 
-* **Gained deep understanding of Amazon Simple Storage Service (S3):**
+* Gained deep understanding of Amazon Simple Storage Service (S3):
   * Grasped the concept and configuration of Access Points.
   * Clearly understood and differentiated various S3 Storage Classes (Standard, Intelligent-Tiering, Standard-IA, One Zone-IA, Glacier, etc.) to optimize storage costs.
   * Mastered concepts of Data Durability and Availability on S3.
   * Configured and managed Lifecycle Policies to automate object lifecycle transitions.
 
-* **Implemented advanced features with Amazon S3:**
+* Implemented advanced features with Amazon S3:
   * Practiced Static Website Hosting through S3.
   * Understood and configured Cross-Origin Resource Sharing (CORS) for web applications.
   * Grasped the concept of Object Keys and how to optimize performance when retrieving data from S3.
   * Explored long-term storage service Amazon S3 Glacier in depth.
 
-* **Explored Hybrid Storage and Data Migration solutions:**
+* Explored Hybrid Storage and Data Migration solutions:
   * Learned about the AWS Snow Family (Snowball, Snowcone) for offline mass data migration.
   * Understood the operational mechanism of AWS Storage Gateway (including File, Volume, and Tape Gateway) to connect on-premises environments with AWS.
   * Mastered Centralized Backup methods.
 
-* **Completed Hands-on Labs:**
+* Completed Hands-on Labs:
   * Applied theoretical knowledge by practicing lab exercises on the AWS platform.
   * Completed labs related to: configuring Amazon S3 Storage Classes, exploring AWS Snowball, configuring AWS Storage Gateway, creating and attaching Amazon EBS, and configuring Amazon EFS.
 
-* **Networking and Community Engagement:**
+* Networking and Community Engagement:
   * Attended the FCAJ Community Day event, networked and learned from experts and members of the First Cloud AI Journey community.

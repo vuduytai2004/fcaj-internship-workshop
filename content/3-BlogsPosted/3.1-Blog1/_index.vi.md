@@ -7,7 +7,8 @@ pre: " <b> 3.1. </b> "
 ---
 # Blog 1 - Building a scalable user search layer on top of Amazon Cognito
 
-**Người đăng bài:** Vũ Duy Tài
+**Được đăng bởi:** Vũ Duy Tài  
+**Ngày đăng bài trên AWS Study Group:** Ngày 5 tháng 6 năm 2026
 
 Nếu đội của bạn chỉ cần tìm kiếm đơn giản trên các thuộc tính tiêu chuẩn của Amazon Cognito, API ListUsers là đủ. Tuy nhiên, khi hệ thống phải xử lý các yêu cầu nâng cao như tìm kiếm trên thuộc tính tùy chỉnh, fuzzy matching, lọc phức tạp và phản hồi dưới một giây, việc xây dựng một lớp tìm kiếm chuyên dụng sẽ là lựa chọn phù hợp.
 Bài viết này trình bày về cách xây dựng một hệ thống tìm kiếm người dùng (user search layer) có khả năng mở rộng và nâng cao trên nền tảng Amazon Cognito, sử dụng kết hợp các dịch vụ của AWS bao gồm AWS Lambda, Amazon DynamoDB và Amazon OpenSearch Service mốt cách ngắn gọn nhất được đề cập trên AWS.

@@ -7,7 +7,8 @@ pre: " <b> 3.3. </b> "
 ---
 # Blog 3 - How ALS GeoAnalytics LITHOLENS™ Revolutionizes Drill Core Logging Using Machine Learning on Amazon EKS
 
-**Author:** Phạm Tùng Dương
+**Posted by:** Pham Tung Duong  
+**AWS Study Group Posting Date:** June 5, 2026
 
 In the mining industry, accurate geological analysis is a crucial factor for improving mine design and development. Traditionally, this process required experts to manually inspect drill core samples on-site—often in remote and harsh areas—which was very time-consuming and labor-intensive.
 To address this issue, ALS GeoAnalytics developed the LITHOLENS™ platform. This is a system applying Machine Learning (ML) and computer vision to automate the core logging process, helping to enhance data consistency, improve operational efficiency, and reduce costs as well as greenhouse gas emissions.

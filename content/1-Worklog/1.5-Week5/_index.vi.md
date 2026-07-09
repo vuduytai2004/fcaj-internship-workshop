@@ -21,32 +21,32 @@ pre: " <b> 1.5. </b> "
 
 ### Kết quả đạt được tuần 5:
 
-* **Nắm vững kiến thức về các Dịch vụ Lưu trữ trên AWS:**
+* Nắm vững kiến thức về các Dịch vụ Lưu trữ trên AWS:
   * Phân biệt rõ ràng các loại lưu trữ: Object Storage, Block Storage và File Storage.
   * Hiểu rõ mục đích và trường hợp sử dụng của các dịch vụ lưu trữ phổ biến như Amazon S3, Amazon EBS và Amazon EFS.
 
-* **Hiểu sâu về Amazon Simple Storage Service (S3):**
+* Hiểu sâu về Amazon Simple Storage Service (S3):
   * Nắm được khái niệm và cách cấu hình Access Point.
   * Hiểu rõ và phân biệt được các Storage Class khác nhau trong S3 (Standard, Intelligent-Tiering, Standard-IA, One Zone-IA, Glacier, v.v.), từ đó có thể tối ưu hoá chi phí lưu trữ.
   * Nắm bắt được các khái niệm về Độ bền (Durability) và Tính sẵn sàng (Availability) của dữ liệu trên S3.
   * Thiết lập và quản lý Lifecycle Policy để tự động chuyển đổi vòng đời lưu trữ của các object.
 
-* **Triển khai các tính năng nâng cao với Amazon S3:**
+* Triển khai các tính năng nâng cao với Amazon S3:
   * Thực hành lưu trữ tĩnh (Static Website Hosting) thông qua S3.
   * Hiểu và cấu hình Cross-Origin Resource Sharing (CORS) cho các ứng dụng web.
   * Nắm bắt được khái niệm Object Key và cách tối ưu hoá hiệu suất (Performance) khi truy xuất dữ liệu từ S3.
   * Tìm hiểu sâu về dịch vụ lưu trữ dài hạn Amazon S3 Glacier.
 
-* **Khám phá các giải pháp Lưu trữ Hybrid và Di chuyển dữ liệu:**
+* Khám phá các giải pháp Lưu trữ Hybrid và Di chuyển dữ liệu:
   * Tìm hiểu về AWS Snow Family (Snowball, Snowcone) dành cho việc di chuyển lượng lớn dữ liệu ngoại tuyến (offline).
   * Hiểu cơ chế hoạt động của AWS Storage Gateway (bao gồm File, Volume và Tape Gateway) để kết nối môi trường on-premises với AWS.
   * Nắm vững các phương pháp sao lưu dữ liệu tập trung (Centralized Backup).
 
-* **Thực hành Lab thực tế:**
+* Thực hành Lab thực tế:
   * Áp dụng các kiến thức lý thuyết thông qua việc thực hành các bài lab trên nền tảng AWS.
   * Hoàn thành các lab liên quan đến: cấu hình Amazon S3 Storage Classes, tìm hiểu AWS Snowball, cấu hình AWS Storage Gateway, tạo và gắn Amazon EBS, cấu hình Amazon EFS.
 
-* **Giao lưu và mở rộng kết nối:**
+* Giao lưu và mở rộng kết nối:
   * Tham gia sự kiện FCAJ Community Day, giao lưu học hỏi từ các chuyên gia và các thành viên trong cộng đồng First Cloud AI Journey.
 
 

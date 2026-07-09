@@ -6,9 +6,7 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-**On this page**, you will need to introduce your worklog. **How** did you complete it? How many weeks did you take to complete the program? **What** did you do in those weeks?
-
-Typically, and as a standard, a worklog is carried out over about 3 months (throughout the internship period) with weekly contents as follows:
+In this section, I will present my worklog throughout the internship period. The plan is built for about 12 weeks (3 months), including tasks to be performed weekly, from getting familiar with the environment and technology, implementing assigned tasks, developing the project, testing, and optimizing the system, to completing the report and summarizing the internship results. The worklog helps track work progress, evaluate achieved results, and ensure all objectives of the internship program are fully met.
 
 **Week 1:** [Getting familiar with basic AWS services, creating an account, and practicing labs to receive $200 credit.](1.1-week1/)
 
@@ -26,9 +24,9 @@ Typically, and as a standard, a worklog is carried out over about 3 months (thro
 
 **Week 8:** [Choosing and finalizing the final internship project topic.](1.8-week8/)
 
-**Week 9:** [Designing AWS architecture and assigning team tasks for the project.](1.9-week9/)
+**Week 9:** [Designing AWS architecture.](1.9-week9/)
 
-**Week 10:** [Starting the implementation of the internship project.](1.10-week10/)
+**Week 10:** [Revising project architecture and distributing tasks among the team.](1.10-week10/)
 
 **Week 11:** [Continuing to build and test the project.](1.11-week11/)
 

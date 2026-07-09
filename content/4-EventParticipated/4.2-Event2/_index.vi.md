@@ -12,11 +12,11 @@ pre: " <b> 4.2. </b> "
 Sự kiện nhằm mục đích tạo không gian để cộng đồng công nghệ giao lưu, kết nối và truyền cảm hứng cho nhau. Thông qua các phiên chia sẻ, sự kiện mong muốn trang bị cho người tham gia từ định hướng nghề nghiệp trong bối cảnh thị trường thay đổi, đến các kiến thức chuyên sâu về Cloud (AWS), tích hợp AI thực tiễn và tư duy triển khai hệ thống cho doanh nghiệp.
 
 ### Danh Sách Diễn Giả
-- **Nguyễn Gia Hưng**: Solution Architect AWS Việt Nam, chia sẻ về tổng quan thị trường việc làm IT và định hướng kỹ năng cốt lõi.
-- **Tịnh Trương**: Platform Engineer tại Gotam X, trình bày về tầm quan trọng của ngữ cảnh (Context) khi giao tiếp với AI và tư duy tránh lạm dụng tool.
-- **Hải Anh**: Kỹ sư từ Pacific Việt Nam, giới thiệu giải pháp dùng Amazon Q để phân tích dữ liệu tự động.
-- **Anh Tịnh**: DevOps Engineer, đi sâu vào Amazon CloudFront, bảo mật và tối ưu chi phí hạ tầng mạng.
-- **Uyển & Thảo (Team UTM)**: Nhóm thí sinh chia sẻ kinh nghiệm thực chiến từ cuộc thi Hackathon 36 giờ với dự án UI Editor bằng AI.
+- **Anh Nguyễn Gia Hưng**: Solution Architect AWS Việt Nam, chia sẻ về tổng quan thị trường việc làm IT và định hướng kỹ năng cốt lõi.
+- **Anh Tịnh Trương**: Platform Engineer tại Gotam X, trình bày về tầm quan trọng của ngữ cảnh (Context) khi giao tiếp với AI và tư duy tránh lạm dụng tool.
+- **Anh Hải Anh**: Kỹ sư từ Pacific Việt Nam, giới thiệu giải pháp dùng Amazon Q để phân tích dữ liệu tự động.
+- **Anh Nguyễn Tuấn Thịnh**: DevOps Engineer, đi sâu vào Amazon CloudFront, bảo mật và tối ưu chi phí hạ tầng mạng.
+- **Team UTM**: Nhóm thí sinh chia sẻ kinh nghiệm thực chiến từ cuộc thi Hackathon 36 giờ với dự án UI Editor bằng AI.
 - **Anh Đức**: Solution Architect – Cloud Kinetiss, phân tích kỹ thuật về tham số Temperature và bản chất không xác định (probabilistic) của AI.
 - **Chị Vy**: Senior Business Systems Analyst, phân tích chuyên sâu về hệ thống Multi-Agent System trong môi trường Enterprise, cụ thể là bài toán đánh giá tín dụng Startup và chia sẻ một kinh nghiệm khi làm việc trong ngân hàng.
 
@@ -41,12 +41,8 @@ Sự kiện diễn ra với không khí cực kỳ thực tế và thẳng thắ
 
 ### Một Số Hình Ảnh Tại Sự Kiện
 
-![Hình ảnh 1](/images/4-EventParticipated/4.2-Event2/media__1782219173007.png)
-![Hình ảnh 2](/images/4-EventParticipated/4.2-Event2/media__1782219187039.png)
-![Hình ảnh 3](/images/4-EventParticipated/4.2-Event2/media__1782219199498.png)
-![Hình ảnh 4](/images/4-EventParticipated/4.2-Event2/media__1782219204672.png)
-![Hình ảnh 5](/images/4-EventParticipated/4.2-Event2/media__1782219212668.png)
-![Hình ảnh 6](/images/4-EventParticipated/4.2-Event2/media__1782219648962.png)
-![Hình ảnh 7](/images/4-EventParticipated/4.2-Event2/media__1782219655208.png)
-![Hình ảnh 8](/images/4-EventParticipated/4.2-Event2/media__1782219660218.png)
-![Hình ảnh 9](/images/4-EventParticipated/4.2-Event2/media__1782219665248.png)
+![Hình ảnh 1](/images/4-EventParticipated/4.2-Event2/image1.jpg)
+![Hình ảnh 2](/images/4-EventParticipated/4.2-Event2/image2.png)
+![Hình ảnh 3](/images/4-EventParticipated/4.2-Event2/image3.png)
+![Hình ảnh 4](/images/4-EventParticipated/4.2-Event2/image4.png)
+![Hình ảnh 5](/images/4-EventParticipated/4.2-Event2/image5.jpg)

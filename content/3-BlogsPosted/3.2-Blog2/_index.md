@@ -7,7 +7,8 @@ pre: " <b> 3.2. </b> "
 ---
 # Blog 2 - Building a Smart Retry Mechanism for Serverless Queue Consumer on AWS
 
-**Author:** Lâm Quang Lộc
+**Posted by:** Lam Quang Loc  
+**AWS Study Group Posting Date:** June 10, 2026
 
 In a serverless architecture, Lambda functions often act as "consumers" of messages from an SQS queue, and then interact with downstream services or external APIs. The problem is: when a downstream service experiences a temporary error or gets throttled, how do we handle retries intelligently?
 

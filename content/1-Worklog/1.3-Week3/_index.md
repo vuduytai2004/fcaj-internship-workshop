@@ -22,25 +22,25 @@ pre: " <b> 1.3. </b> "
 
 ### Week 3 Achievements:
 
-* **Building fundamental network architecture with AWS VPC (Virtual Private Cloud):** 
+* Building fundamental network architecture with AWS VPC (Virtual Private Cloud): 
   * Understanding the concept of Isolation to ensure the safety of resources on the Cloud.
-  * Dividing and managing IP ranges effectively through the setup and calculation of **CIDR Blocks**.
+  * Dividing and managing IP ranges effectively through the setup and calculation of CIDR Blocks.
   * Structuring and routing traffic flow through subnets (Public/Private) to form a complete network system.
 
-* **Deploying security and expanding internal network infrastructure:**
-  * Applying Multi-layer Security with **Security Group** (Instance level) and **NACL** (Subnet level).
-  * Solving the problem of cross-network connection and communication between different VPCs through **VPC Peering**.
-  * Managing centralized network connectivity and simplifying large-scale complex network architectures with **Transit Gateway**.
+* Deploying security and expanding internal network infrastructure:
+  * Applying Multi-layer Security with Security Group (Instance level) and NACL (Subnet level).
+  * Solving the problem of cross-network connection and communication between different VPCs through VPC Peering.
+  * Managing centralized network connectivity and simplifying large-scale complex network architectures with Transit Gateway.
 
-* **Establishing Hybrid Connectivity and Ensuring High Availability:**
-  * Mastering the method of establishing secure tunnels between On-premises networks and AWS over the Internet using **Site-to-Site VPN**.
-  * Learning about a specialized, stable, and high-speed network connection solution using **Direct Connect (DX)**.
-  * Distributing traffic, load balancing the system, and ensuring service continuity with **Elastic Load Balancer (ELB)**.
+* Establishing Hybrid Connectivity and Ensuring High Availability:
+  * Mastering the method of establishing secure tunnels between On-premises networks and AWS over the Internet using Site-to-Site VPN.
+  * Learning about a specialized, stable, and high-speed network connection solution using Direct Connect (DX).
+  * Distributing traffic, load balancing the system, and ensuring service continuity with Elastic Load Balancer (ELB).
 
-* **Practicing and applying theory (Hands-on Labs Module 2):**
+* Practicing and applying theory (Hands-on Labs Module 2):
   * Successfully deploying practical Labs related to virtual networks, network security, and load balancing based on the awsstudygroup platform.
   * Ability to troubleshoot basic issues related to routing and IP allocation on AWS.
 
-* **Developing soft skills and expanding the network (Community):**
-  * Actively participating in the **FCAJ Community Day** event to keep up with new technology trends.
+* Developing soft skills and expanding the network (Community):
+  * Actively participating in the FCAJ Community Day event to keep up with new technology trends.
   * Exchanging and learning practical experiences from Mentors and other members in the program.

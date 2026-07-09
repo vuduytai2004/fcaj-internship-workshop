@@ -5,95 +5,67 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
 
-# DocuFlow AI Project Proposal & Data Analytics Module
+# DocuFlow AI Project Proposal & Team Work Assignment
 
 ## 1. Executive Summary
 
-DocuFlow AI is an intelligent invoice and receipt processing platform on AWS based on a serverless architecture. The system is designed to automatically ingest files, extract data using AI/OCR technology, standardize results into JSON format, and manage processing statuses. The project serves the purpose of demonstrating a complete end-to-end workflow within an AWS workshop environment.
+DocuFlow AI is an intelligent invoice and receipt processing platform on AWS based on a serverless architecture. The system is designed to automatically ingest files, extract data using OCR (Textract) and an External AI API, standardize results into JSON format, and manage processing statuses. The project serves the purpose of demonstrating a complete end-to-end workflow within an AWS workshop environment, built by a 5-member team (AeroOps).
 
+## 2. Solution Architecture & Main Workflow
 
-## 2. Problem Statement
+![DocuFlow AI Architecture](/images/2-Proposal/architecture_v4.png)
 
-**Current Problems**
+**Main Demo Flow:**
+User -> CloudFront/Amplify -> Cognito -> API Gateway -> Lambda Presigned URL -> S3 Raw -> EventBridge -> SQS + DLQ -> Job Starter Lambda -> Step Functions -> Validate Lambda -> Textract -> AI Proxy Lambda -> External AI API outside AWS -> Confidence/Status Lambda -> DynamoDB + S3 Processed -> CloudWatch/X-Ray -> SNS/SES Alert.
 
-* Manual invoice data entry is time-consuming and prone to errors in crucial information such as vendors, dates, or amounts.
-* Documents are often scattered in emails or folders, making it difficult to search, audit, and track statuses.
-* Lack of overall visibility makes it hard for the finance team to know exactly which documents have errors and require manual intervention.
-* The process is prone to bottlenecks during peak periods at the end of the month or quarter when invoice volumes spike.
+## 3. Overall Team Assignment
 
-**Proposed Solution**
+The project is divided among 5 members with specific roles and modules:
+* **Hoang Trong Tra (Leader / Integration Owner):** Ingestion, Queue & Workflow Orchestration (S3, EventBridge, SQS + DLQ, Job Starter Lambda, Step Functions).
+* **Vu Duy Tai (AI Owner):** Textract, AI Proxy Lambda & External AI Normalization (Textract AnalyzeExpense, AI Proxy, External AI API, confidence/status logic).
+* **Nguyen Huu Tinh (Frontend/Auth Owner):** Frontend, Auth & User Flow (CloudFront, Amplify, Cognito, API Gateway, upload/result/review UI).
+* **Lam Quang Loc (Data Owner):** Data Persistence & Result Management (DynamoDB, S3 processed JSON, document metadata, job state).
+* **Pham Tung Duong (Ops/Security/IaC Owner):** Observability, Security, IaC & Cost Control (IAM, KMS, Secrets Manager, CloudTrail, AWS SAM, CloudWatch, X-Ray, SNS/SES).
 
-* Build a direct and secure document upload portal via presigned URLs.
-* Operate a fully automated serverless workflow, integrating retry mechanisms, status tracking, and Dead Letter Queues (DLQ).
-* Automatically extract key data fields using Textract and Bedrock, then store metadata in DynamoDB and JSON results in S3.
+## 4. Service Ownership & Responsibilities
 
-**Benefits & Return on Investment (ROI)**
+To avoid orphaned services, every component has a designated owner responsible for deployment, evidence collection (logs/screenshots), and cleanup:
+* **Edge/Frontend & Auth (Tinh):** CloudFront, Amplify, Cognito deployment, routing, UI build, login/logout, JWT handling.
+* **API Layer (Tra + Tinh):** API Gateway routing, backend/frontend contract.
+* **Ingestion & Workflow (Tra):** S3 Raw bucket, Lambda Presigned URL, EventBridge routing, SQS+DLQ, Job Starter Lambda, Step Functions state machine, Validate Lambda.
+* **AI Extraction & Normalization (Tai):** Textract integration, AI Proxy Lambda (calling external AI), JSON schema normalization, confidence score calculation.
+* **Data Persistence (Loc):** DynamoDB tables, S3 Processed JSON, query optimization.
+* **Observability, Security & Cost (Duong):** IAM roles, KMS encryption, Secrets Manager (API keys), CloudTrail, CloudWatch logs/alarms, X-Ray, SNS/SES alerts, SAM deployment, Budgets.
 
-* Minimize manual data entry, enhance status visibility, and provide structured data outputs.
-* The system automatically sends alerts when errors are detected or extraction confidence is low, optimizing review time.
+## 5. General Rules & Mandatory Contracts
 
+* **Architecture MVP:** No unauthorized addition/removal of services after admin approval. All changes must be communicated.
+* **Data Contract:** Unified JSON schema for document results, required fields, review fields, metadata, and error fields.
+* **Status Model:** `UPLOADED` -> `QUEUED` -> `PROCESSING` -> `EXTRACTED` | `REVIEW_REQUIRED` | `FAILED` -> `CORRECTED` -> `APPROVED`.
+* **API Key Security:** External AI API keys must be stored in Secrets Manager. Frontend cannot call the external AI directly; the AI Proxy Lambda is the only layer allowed to communicate with it.
+* **Team Rules:** Do not hard-code API keys. Prefix all resources with `docuflow-dev-*` and tag them with `Project=DocuFlowAI`. Freeze schema, endpoints, and status models before demo.
 
-## 3. Solution Architecture
+## 6. Implementation Timeline (12 Weeks)
 
-The overall architecture of DocuFlow AI is structured into 5 specialized layers: frontend/auth, ingestion/API, workflow processing, data storage/analytics, and observability/security.
+* **Week 1-2:** Finalize architecture design, API drafts, UI/API requirements, DynamoDB schema, SAM/security plans. Build Foundation (S3/EventBridge/SQS, Textract PoC, Cognito/Amplify skeleton).
+* **Week 3-4:** Upload & Queue (Presigned URL, event/queue, upload UI, S3/IAM baseline). Workflow skeleton (Step Functions happy path, Textract parser Lambda, Start process UX).
+* **Week 5-6:** AI integration (Connect workflow, AI Proxy + External AI normalize, processing UI, Secrets Manager). Storage integration (Save DynamoDB/S3 result, detail result page, IAM refinement).
+* **Week 7-8:** Review flow (Status transition, review reasons, reviewer UI, SNS/SES alerts). Error handling (Retry/catch/failure path, invalid JSON tests, UI error states, Alarms + DLQ).
+* **Week 9-10:** Observability & Report (Integration fixes, AI edge cases, UI polish, X-Ray/CloudTrail/Budgets). E2E testing (End-to-end test owner, AI test cases, UI screenshots, Security/cost checklist).
+* **Week 11-12:** Documentation & Final Demo (Demo script, AI explanation, frontend/data model guides, deploy/cleanup guides, demo integration).
 
-**Core System Workflow & AI Extraction**
+## 7. Integration Risks & Mitigation
 
-* **Event Ingestion:** When a user uploads a file to the S3 Raw Bucket, an event is sent via EventBridge to an SQS queue.
-* **Workflow Orchestration:** Lambda triggers a Step Functions Standard Workflow to orchestrate the entire document lifecycle.
-* **Raw Extraction (OCR):** Amazon Textract (AnalyzeExpense) reads and extracts raw information fields from invoices/receipts.
-* **Intelligent Standardization (GenAI):** Amazon Bedrock receives raw data, classifies, and standardizes the format into a single JSON schema.
-* **Result Validation:** Lambda performs JSON format checks, calculates the confidence score, and updates the status accordingly.
+| Risk | Mitigation Strategy |
+| --- | --- |
+| External AI output schema mismatch | Finalize JSON schema early; validate via Lambda; use common sample outputs. |
+| Frontend upload finishes but status hangs | Finalize flow (upload -> S3 -> event -> queue -> workflow); log documentId at each step. |
+| External AI API key leak | Store in Secrets Manager; no direct frontend access; no logging of secrets. |
+| Workflow fails and is hard to debug | Enable Step Functions history, CloudWatch structured logs, and X-Ray tracing. |
+| DynamoDB queries don't match UI | Finalize response models for list/detail/review; mock data before backend is ready. |
 
+## 8. Definition of Done & Handover Checklists
 
-## 4. Technical Implementation (Focus on AI Extraction & Classification)
-
-The AI Extraction & Classification Module is handled by Member 3, primarily working with Textract, Bedrock, and Lambda.
-
-**AI Component Design**
-
-* **Raw Data Storage:** Must retain all raw results from Textract in the `processed` folder on S3 for debugging purposes when data discrepancies occur.
-* **Prompt Design for Bedrock:** Bedrock only accepts reduced raw fields as input for optimization. The prompt must strictly request a valid JSON format according to the schema, absolutely avoiding markdown or explanatory text.
-* **Confidence Policy:** Document status is granted as `EXTRACTED` only when `confidenceScore >= 0.80` and the system recognizes all mandatory data fields.
-* **Manual Review Redirection:** The system will flag as `REVIEW_REQUIRED` if the confidence score is `< 0.80` or when extraction is missing the vendor name (`vendorName`) and total amount (`totalAmount`).
-* **Error Handling:** If Bedrock or Textract encounters a temporary error, Step Functions will initiate retries using a backoff mechanism; if the maximum number of attempts is exceeded, the status will change to `FAILED`.
-
-
-## 5. Timeline & Milestones
-
-The plan is distributed over 12 weeks with focus objectives:
-
-* **Week 1:** Agree on scope, data contract, overall architecture, and module assignments for each member.
-* **Week 4:** Complete the skeleton framework for EventBridge, SQS, Job Starter services, and the Step Functions workflow.
-* **Week 5:** Successfully integrate the Textract flow, ensuring raw data extraction capabilities from sample sets.
-* **Week 6:** Apply Bedrock to standardize data, validate JSON formats, and store in the S3 `processed` bucket.
-* **Week 8:** Finalize error handling mechanisms, DLQs, retry features, and set up SNS alerts for `FAILED` or `REVIEW_REQUIRED` cases.
-* **Week 11-12:** Complete E2E testing, prepare demo scripts, finalize runbook documentation, and verify resource clean-up scripts.
-
-
-## 6. Cost Control & Budgeting
-
-* **Resource Limits:** Constrain file sizes, number of processed pages, and only use about 5-10 sample invoices/receipts during the demo.
-* **Model Optimization:** Prioritize low-cost Bedrock models and verify model availability in the account/region before deployment.
-* **Budget Alerts:** Set up AWS Budgets alerts at $5 and $10 cost thresholds.
-* **Resource Lifecycle:** Require configuring S3 lifecycles or using cleanup scripts to clear stored files after the workshop ends, avoiding ongoing maintenance fees.
-
-
-## 7. Risk Assessment (AI & Extraction Module)
-
-| Risk | Impact | Mitigation Strategy |
-| --- | --- | --- |
-| Textract misreads due to blurry images or weird formats | System outputs incorrect or missing data fields | Use sharp sample documents, apply confidence thresholds and `REVIEW_REQUIRED` status. |
-| Bedrock outputs malformed JSON data | Causes data parsing errors at the Lambda layer | Write strict prompts, enforce JSON schema validation, and handle retries/fallbacks. |
-| Region does not support Bedrock model | The entire AI standardization flow is interrupted | Verify region early on, prepare backup models or cross-region deployment plans. |
-
-
-## 8. Expected Outcomes (Definition of Done)
-
-* Users can successfully log in and upload sample invoice/receipt files to the system.
-* The uploaded files trigger the Step Functions chain to run smoothly through: Textract, Bedrock, JSON validation, and storage.
-* The `result.json` data is correctly formatted and stored in the S3 processed bucket according to the data contract.
-* The DynamoDB table accurately records the metadata and current status of the document.
-* Test cases prove the system works correctly for at least one `EXTRACTED` scenario and one exception scenario (`REVIEW_REQUIRED` or `FAILED`).
+* **General DoD:** Upload at least 3 sample invoices/receipts from the frontend. EventBridge/SQS/Step Functions execute correctly for both happy and failure paths. Textract extracts main fields and External AI API returns valid JSON. DynamoDB stores correct schema; S3 processed holds `result.json`. CloudWatch logs trace `documentId` with active alarms. Secrets Manager secures API keys with proper IAM scoping. Clean up all resources after the demo.
+* **Module Deliverables:** Each member must provide evidence (screenshots, logs, or equivalent documentation) for their respective components, such as workflow diagrams, execution histories, normalized JSON samples, API responses, SAM deploy templates, and budget alert screenshots.

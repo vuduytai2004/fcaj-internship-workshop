@@ -7,48 +7,24 @@ pre: " <b> 1.10. </b> "
 ---
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Lấy ý kiến phản hồi và tiếp tục hoàn thiện sơ đồ kiến trúc.
+* Phân rã kiến trúc thành các hạng mục công việc cụ thể.
+* Phân chia công việc rõ ràng cho từng thành viên trong nhóm.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | Trình bày sơ đồ kiến trúc với các anh chị FCAJ và nhóm để lấy ý kiến phản hồi và sửa chữa | 22/06/2026 | 22/06/2026 | |
+| 3 | Tiếp tục chỉnh sửa sơ đồ kiến trúc dự án sau khi được các anh chị admin sửa | 23/06/2026 | 25/06/2026 | |
+| 6 | Phân rã sơ đồ kiến trúc thành từng phần để phân chia công việc rõ ràng | 26/06/2026 | 26/06/2026 | |
+| 7 | Phân chia công việc giữa các thành viên dựa trên các phần đã phân rã ở sơ đồ kiến trúc | 27/06/2026 | 27/06/2026 | |
 
 
 ### Kết quả đạt được tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Đã trình bày sơ đồ kiến trúc và nhận được nhiều ý kiến đóng góp từ các anh chị FCAJ và nhóm.
+* Hoàn tất việc chỉnh sửa và cập nhật sơ đồ kiến trúc dự án dựa trên những góp ý của admin.
+* Thực hiện phân rã thành công sơ đồ kiến trúc thành các module và task nhỏ hơn.
+* Đã hoàn thành việc phân chia công việc cụ thể cho từng thành viên dựa trên cấu trúc đã phân rã.
 
 

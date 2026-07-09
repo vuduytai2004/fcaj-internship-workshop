@@ -7,7 +7,8 @@ pre: " <b> 3.3. </b> "
 ---
 # Blog 3 - Cách ALS GeoAnalytics LITHOLENS™ Cách Mạng Hóa Việc Ghi Chép Mẫu Lõi Khoan Bằng Machine Learning Trên Amazon EKS
 
-**Người đăng bài:** Phạm Tùng Dương
+**Được đăng bởi:** Phạm Tùng Dương  
+**Ngày đăng bài trên AWS Study Group:** Ngày 5 tháng 6 năm 2026
 
 Trong ngành khai thác khoáng sản, việc phân tích địa chất chính xác là yếu tố then chốt để cải thiện thiết kế và phát triển mỏ. Theo phương pháp truyền thống, quy trình này đòi hỏi các chuyên gia phải kiểm tra trực tiếp các mẫu lõi khoan tại hiện trường—thường là những khu vực xa xôi và khắc nghiệt—vốn rất tốn thời gian và công sức.
 Để giải quyết vấn đề này, ALS GeoAnalytics đã phát triển nền tảng LITHOLENS™. Đây là một hệ thống ứng dụng Machine Learning (ML) và thị giác máy tính để tự động hóa quy trình ghi chép mẫu lõi, giúp tăng cường tính nhất quán của dữ liệu, nâng cao hiệu quả vận hành và giảm thiểu chi phí cũng như khí thải nhà kính.

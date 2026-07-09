@@ -7,7 +7,8 @@ pre: " <b> 3.2. </b> "
 ---
 # Blog 2 - Xây dựng Cơ chế Retry Thông minh cho Serverless Queue Consumer trên AWS
 
-**Người đăng bài:** Lâm Quang Lộc
+**Được đăng bởi:** Lâm Quang Lộc  
+**Ngày đăng bài trên AWS Study Group:** Ngày 10 tháng 6 năm 2026
 
 Trong kiến trúc serverless, Lambda function thường đóng vai trò là "người tiêu thụ" message từ hàng đợi SQS, sau đó tương tác với các downstream service hoặc external API. Vấn đề là: khi downstream service bị lỗi tạm thời hay bị throttle, chúng ta xử lý retry như thế nào cho thật thông minh?
 

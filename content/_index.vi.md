@@ -7,7 +7,7 @@ chapter: false
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Vu Duy Tai
+&emsp; **Họ và tên:** Vũ Duy Tài
 
 &emsp; **Số điện thoại:** 0902602034
 
@@ -26,8 +26,6 @@ chapter: false
 &emsp; **Thời gian thực tập:** Từ ngày 17/04/2026 đến ngày 10/07/2026
 
 ![Ảnh đại diện của bạn](/images/avatar.png)
-
-
 
 ### Nội dung báo cáo
 

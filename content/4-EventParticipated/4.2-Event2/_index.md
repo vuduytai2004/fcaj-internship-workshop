@@ -12,11 +12,11 @@ pre: " <b> 4.2. </b> "
 The event aims to create a space for the tech community to network, connect, and inspire each other. Through the sharing sessions, the event hopes to equip participants with everything from career orientation in a changing market context, to in-depth knowledge about Cloud (AWS), practical AI integration, and system deployment mindsets for enterprises.
 
 ### Speakers
-- **Nguyen Gia Hung**: Solution Architect AWS Vietnam, shared an overview of the IT job market and core skill orientation.
+- **Mr. Nguyen Gia Hung**: Solution Architect AWS Vietnam, shared an overview of the IT job market and core skill orientation.
 - **Tinh Truong**: Platform Engineer at Gotam X, presented on the importance of Context when communicating with AI and the mindset to avoid tool abuse.
 - **Hai Anh**: Engineer from Pacific Vietnam, introduced a solution using Amazon Q for automated data analysis.
 - **Mr. Tinh**: DevOps Engineer, deep-dived into Amazon CloudFront, security, and network infrastructure cost optimization.
-- **Uyen & Thao (Team UTM)**: A team of contestants shared their practical experience from a 36-hour Hackathon with an AI UI Editor project.
+- **Team UTM**: A team of contestants shared their practical experience from a 36-hour Hackathon with an AI UI Editor project.
 - **Mr. Duc**: Solution Architect – Cloud Kinetics, analyzed the technical aspects of the Temperature parameter and the probabilistic nature of AI.
 - **Ms. Vy**: Senior Business Systems Analyst, conducted an in-depth analysis of Multi-Agent Systems in the Enterprise environment, specifically for the Startup credit scoring problem, and shared an experience working in a bank.
 
@@ -41,12 +41,8 @@ The event took place in an extremely practical and straightforward atmosphere. I
 
 ### Some Images At Event
 
-![Event image 1](/images/4-EventParticipated/4.2-Event2/media__1782219173007.png)
-![Event image 2](/images/4-EventParticipated/4.2-Event2/media__1782219187039.png)
-![Event image 3](/images/4-EventParticipated/4.2-Event2/media__1782219199498.png)
-![Event image 4](/images/4-EventParticipated/4.2-Event2/media__1782219204672.png)
-![Event image 5](/images/4-EventParticipated/4.2-Event2/media__1782219212668.png)
-![Event image 6](/images/4-EventParticipated/4.2-Event2/media__1782219648962.png)
-![Event image 7](/images/4-EventParticipated/4.2-Event2/media__1782219655208.png)
-![Event image 8](/images/4-EventParticipated/4.2-Event2/media__1782219660218.png)
-![Event image 9](/images/4-EventParticipated/4.2-Event2/media__1782219665248.png)
+![Event image 1](/images/4-EventParticipated/4.2-Event2/image1.jpg)
+![Event image 2](/images/4-EventParticipated/4.2-Event2/image2.png)
+![Event image 3](/images/4-EventParticipated/4.2-Event2/image3.png)
+![Event image 4](/images/4-EventParticipated/4.2-Event2/image4.png)
+![Event image 5](/images/4-EventParticipated/4.2-Event2/image5.jpg)

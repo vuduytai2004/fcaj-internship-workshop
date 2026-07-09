@@ -22,12 +22,12 @@ pre: " <b> 1.6. </b> "
 
 
 ### Week 6 Achievements:
-- **Mastered Cloud Security Fundamentals:** Understood core concepts such as Confidentiality, Integrity, Availability (CIA Triad), the AAA framework (Authentication, Authorization, Accounting), and risk management practices on AWS.
-- **Deepened Knowledge of the Shared Responsibility Model:** Clearly distinguished between security OF the cloud (AWS's responsibility) and security IN the cloud (customer's responsibility), along with understanding various compliance standards.
-- **Identity and Access Management (IAM):** Proficient in creating and managing IAM Users, Groups, Roles, and Policies. Successfully applied the principle of Least Privilege, configured Multi-Factor Authentication (MFA), and worked with JSON Policies.
-- **Application Authentication with Amazon Cognito:** Explored and utilized User Pools for user management, Identity Pools for granting resource access, as well as integrating Social Identity Providers and Web Identity Federation.
-- **Data Encryption and Security Management:**
+- Mastered Cloud Security Fundamentals: Understood core concepts such as Confidentiality, Integrity, Availability (CIA Triad), the AAA framework (Authentication, Authorization, Accounting), and risk management practices on AWS.
+- Deepened Knowledge of the Shared Responsibility Model: Clearly distinguished between security OF the cloud (AWS's responsibility) and security IN the cloud (customer's responsibility), along with understanding various compliance standards.
+- Identity and Access Management (IAM): Proficient in creating and managing IAM Users, Groups, Roles, and Policies. Successfully applied the principle of Least Privilege, configured Multi-Factor Authentication (MFA), and worked with JSON Policies.
+- Application Authentication with Amazon Cognito: Explored and utilized User Pools for user management, Identity Pools for granting resource access, as well as integrating Social Identity Providers and Web Identity Federation.
+- Data Encryption and Security Management:
   - Grasped data encryption mechanisms (Encryption at Rest) using Amazon Key Management Service (KMS), including the creation and management of Customer Managed Keys (CMK) and setting up Key Policies.
   - Configured AWS Security Hub to obtain a Centralized View of security posture, automate Compliance Checks, and evaluate security Findings.
-- **Hands-on with Advanced Security Tools:** Researched and learned about system protection services such as Amazon GuardDuty (threat detection), AWS WAF (Web Application Firewall), and DDoS protection solutions.
-- **Completed Practical Labs:** Applied all theoretical knowledge from Module 5 into practice and consolidated skills through a comprehensive series of hands-on labs.
+- Hands-on with Advanced Security Tools: Researched and learned about system protection services such as Amazon GuardDuty (threat detection), AWS WAF (Web Application Firewall), and DDoS protection solutions.
+- Completed Practical Labs: Applied all theoretical knowledge from Module 5 into practice and consolidated skills through a comprehensive series of hands-on labs.
