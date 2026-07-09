@@ -7,48 +7,27 @@ pre: " <b> 1.11. </b> "
 ---
 ### Mục tiêu tuần 11:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Phát triển các Lambda functions để xử lý luồng AI (Textract Parser, AI Proxy, Confidence + Status).
+* Thiết lập SNS và SES để gửi email thông báo cho người dùng.
+* Thực hiện kiểm thử (test) và lưu trữ bằng chứng (evidence) cho các kịch bản.
+* Hoàn thiện tài liệu luồng AI và rà soát kết quả.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | Tạo và viết code cho Textract Parser Lambda để xử lý raw output của Textract Analyze Expense | 29/06/2026 | 29/06/2026 | |
+| 3 | Tạo và viết code cho AI Proxy Lambda để gọi External AI API qua giao thức HTTPS | 30/06/2026 | 30/06/2026 | |
+| 4 | Tạo và viết code cho Confidence + Status Lambda xử lý tính điểm tin cậy và quyết định trạng thái tài liệu (EXTRACTED/REVIEW_REQUIRED/FAILED) | 01/07/2026 | 01/07/2026 | |
+| 5 | Chạy test và lưu evidence các kịch bản Lambda (file rõ/mờ, missing field, Invalid JSON) | 02/07/2026 | 02/07/2026 | |
+| 6 | Hoàn thiện tài liệu luồng AI: rà soát output Lambda khớp JSON Schema và kiểm tra Definition of Done | 03/07/2026 | 03/07/2026 | |
+| 7 | Thiết lập SNS và SES để gửi email thông báo trạng thái tài liệu về cho người dùng | 04/07/2026 | 04/07/2026 | |
 
 
 ### Kết quả đạt được tuần 11:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Đã tạo và viết code thành công cho Textract Parser Lambda để xử lý raw output.
+* Hoàn thiện code AI Proxy Lambda cho phép gọi External AI API qua HTTPS ổn định.
+* Phát triển xong Confidence + Status Lambda, xử lý logic tính điểm tin cậy và quyết định trạng thái tài liệu chính xác.
+* Chạy test thành công các kịch bản Lambda đa dạng (file mờ, thiếu trường, invalid JSON) và lưu trữ đầy đủ evidence.
+* Hoàn thiện toàn bộ tài liệu luồng AI, rà soát output khớp hoàn toàn với JSON Schema và đạt Definition of Done.
+* Đã thiết lập thành công SNS và SES để tự động gửi email thông báo cho người dùng.
