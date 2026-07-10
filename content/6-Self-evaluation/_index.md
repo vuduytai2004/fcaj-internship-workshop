@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-During my internship at First Cloud AI Journey Bootcamp from April 17, 2026 to July 10, 2026, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
+During my internship at First Cloud AI Journey Bootcamp from April 17, 2026 to July 30, 2026, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
 I participated in developing the DocuFlow AI invoice and receipt processing platform using a serverless architecture on AWS, taking main responsibility for building the data extraction flow using Amazon Textract, standardizing results via AI Proxy Lambda, and setting up confidence evaluation logic, through which I improved my skills in cloud service integration, problem-solving, teamwork, maintaining discipline, and demonstrating a high sense of responsibility.  
 
 In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.

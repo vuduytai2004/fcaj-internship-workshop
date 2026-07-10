@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-Trong suốt thời gian thực tập tại Bootcamp First Cloud AI Journey từ 17/04/2026 đến 10/07/2026, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường vào môi trường làm việc thực tế.
+Trong suốt thời gian thực tập tại Bootcamp First Cloud AI Journey từ 17/04/2026 đến 30/07/2026, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường vào môi trường làm việc thực tế.
 
 Tôi đã tham gia phát triển nền tảng xử lý hóa đơn và biên nhận DocuFlow AI sử dụng kiến trúc serverless trên AWS, chịu trách nhiệm chính trong việc xây dựng luồng trích xuất dữ liệu bằng Amazon Textract, chuẩn hóa kết quả qua AI Proxy Lambda và thiết lập logic đánh giá độ tin cậy, qua đó cải thiện kỹ năng chuyên môn về tích hợp dịch vụ đám mây, phát triển tư duy giải quyết vấn đề, cũng như rèn luyện tốt khả năng hợp tác nhóm, duy trì kỷ luật và tinh thần trách nhiệm cao trong công việc.
 
