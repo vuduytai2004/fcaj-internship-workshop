@@ -10,19 +10,19 @@ Trong phần này, mình sẽ trình bày kế hoạch thực hiện (worklog) c
 
 **Tuần 1:** [Làm quen các dịch vụ AWS cơ bản, tạo tài khoản và làm lab nhận $200 credit.](1.1-week1/)
 
-**Tuần 2:** [Học và thực hành lab Module 1 (AWS Study Group).](1.2-week2/)
+**Tuần 2:** [Học lý thuyết và thực hành lab Module 1 (AWS Study Group).](1.2-week2/)
 
-**Tuần 3:** [Học và thực hành lab Module 2 (AWS Study Group).](1.3-week3/)
+**Tuần 3:** [Học lý thuyết và thực hành lab Module 2 (AWS Study Group).](1.3-week3/)
 
-**Tuần 4:** [Học và thực hành lab Module 3 (AWS Study Group).](1.4-week4/)
+**Tuần 4:** [Học lý thuyết và thực hành lab Module 3 (AWS Study Group).](1.4-week4/)
 
-**Tuần 5:** [Học và thực hành lab Module 4 (AWS Study Group).](1.5-week5/)
+**Tuần 5:** [Học lý thuyết và thực hành lab Module 4 (AWS Study Group).](1.5-week5/)
 
-**Tuần 6:** [Học và thực hành lab Module 5 (AWS Study Group).](1.6-week6/)
+**Tuần 6:** [Học lý thuyết và thực hành lab Module 5 (AWS Study Group).](1.6-week6/)
 
-**Tuần 7:** [Học và thực hành lab Module 6 (AWS Study Group).](1.7-week7/)
+**Tuần 7:** [Học lý thuyết và thực hành lab Module 6 (AWS Study Group).](1.7-week7/)
 
-**Tuần 8:** [Chọn và chốt đề tài đồ án thực tập cuối kỳ.](1.8-week8/)
+**Tuần 8:** [Lên ý tưởng và chôt đề tài đồ án thực tập.](1.8-week8/)
 
 **Tuần 9:** [Thiết kế kiến trúc AWS.](1.9-week9/)
 
@@ -30,4 +30,4 @@ Trong phần này, mình sẽ trình bày kế hoạch thực hiện (worklog) c
 
 **Tuần 11:** [Tiếp tục xây dựng và kiểm thử đồ án.](1.11-week11/)
 
-**Tuần 12:** [Hoàn thiện và tổng kết đồ án thực tập.](1.12-week12/)
+**Tuần 12:** [Hoàn thiện đồ án và viết báo cáo thực tập.](1.12-week12/)
